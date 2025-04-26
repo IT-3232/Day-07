@@ -1,12 +1,14 @@
 package lk.ac.vau.ict.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
-public class Workshop {
+public class Workshops {
     @Id
     private int id;
 
@@ -16,6 +18,7 @@ public class Workshop {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    
+    @OneToMany(mappedBy = "workshops")
+    private List<Session> sessions;
 
 }
