@@ -27,4 +27,7 @@ public class Session {
 
     @ManyToMany(mappedBy = "sessions")
     private List<Presenter> presenters;
+
+    @ManyToMany(mappedBy = "sessions")
+    private List<PostGraduate> postGraduates;
 }
