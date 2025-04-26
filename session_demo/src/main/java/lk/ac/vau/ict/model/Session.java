@@ -30,4 +30,7 @@ public class Session {
 
     @ManyToMany(mappedBy = "sessions")
     private List<PostGraduate> postGraduates;
+
+    @ManyToMany(mappedBy = "sessions")
+    private List<UnderGraduate> underGraduates;
 }
